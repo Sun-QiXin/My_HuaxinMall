@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  display: flex; /* 弹性盒子布局模式 */
+  align-items: center; /* 垂直居中 */
+  justify-content: center; /* 水平居中 */
+  background: url("../images/background_login2.jpg") no-repeat;
+  background-size: cover;
+}
+
+.container {
+  position: relative;
+  width: 24rem;
+}
+
+.panel {
+  /* 实现垂直居中对齐 */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* 实现垂直居中对齐 */
+  background: rgba(255, 255, 255, 0.4);
+  display: flex;
+  justify-content: center;
+  width: 400px;
+  padding: 40px;
+  box-sizing: border-box; /* 设置盒子为CSS3新类型 */
+  box-shadow: 0 15px 25px rgba(255, 255, 255, 0.4);
+  border-radius: 10px;
+}
+.switch h1 {
+  width: 100%;
+  text-align: center;
+  font-size: 1.4rem;
+  color: rgba(47, 53, 240, 0.8);
+  border-bottom: rgba(39, 29, 255, 0.8) solid 2px;
+  cursor: default; /* 设置鼠标样式 */
+}
+
+.input input {
+  outline: none; /* 去掉轮廓线 */
+  width: 100%;
+  border: none;
+  background: none;
+  border-bottom: 0.1rem solid #3132ff;
+  color: #FFF;
+  font-size: 1rem;
+}
+
+.input::after {
+  content: attr(aria-placeholder); /* 前面自定义元素的属性值 */
+  position: absolute;
+  left: 0;
+  top: -20%;
+  font-size: 1.1rem;
+  color: rgba(0, 14, 255, 0.7);
+  font-weight: 400;
+  transition: 0.3s; /* 动画过渡 */
+}
+
+.input.focus::after {
+  /* jquery动态添加样式 */
+  top: -60%; /*  点击文本框时让字体向上走60%*/
+  font-size: 1rem;
+}
+
+.input#forget {
+  color: #3549ff;
+  font-size: 0.8rem;
+  text-decoration: none; /* 去掉超链接下划线 */
+}
+
+.input#forget:hover {
+  color: rgb(45, 46, 255);
+}
+
+.input#login {
+  color: #3933ff;
+  font-size: 0.8rem;
+  text-decoration: none; /* 去掉超链接下划线 */
+}
+
+.input#login:hover {
+  color: rgba(138, 143, 255, 0.8);
+}
+
+form p {
+  text-align: center;
+}
+
+form span {
+  color: #4942ff;
+  font-size: 0.8rem;
+  cursor: default; /* 设置鼠标样式 */
+}
+
+form {
+  width: 12rem;
+  margin: 1rem 0 0;
+}
+
+form .input {
+  position: relative;
+  opacity: 1;
+  width: 100%;
+  margin: 2rem 0 0;
+  height: 42px;
+}
+
+form .input#userName {
+  margin: 3rem 0 0;
+}
+
+form .input#password {
+  height: 1.6rem;
+}
+
+form button {
+  display: block; /* 转换为块元素 */
+  border: none;
+  outline: none; /* 去掉轮廓线*/
+  margin: 2rem 61px 0;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(90deg, #1d72ff, rgb(179, 240, 255));
+  box-shadow: 0 0 8px #463eff;
+  cursor: pointer; /* 设置鼠标样式为小手 */
+  transition: all 0.4s ease 0s; /* 动画过渡 */
+}
+
+form button:hover {
+  border: none;
+  outline: none; /* 去掉轮廓线*/
+  margin: 2rem -7px 0;
+  width: 100%;
+  height: 3.5rem;
+  border-radius: 3rem;
+  background: linear-gradient(90deg, rgba(28, 118, 255, 0.75), rgba(36, 176, 255, 0.75));
+  box-shadow: 0 0 8px #4c43ff;
+  cursor: pointer; /* 设置鼠标样式为小手 */
+  color: rgba(0, 0, 0, 0.6);
+}

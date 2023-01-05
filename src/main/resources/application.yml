@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.100.101:3306/MyWebsite?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+    username: root
+    password: 362623
+  mvc:
+    view:
+      prefix:
+      suffix: .html
+
+  mail:
+    # 配置 SMTP 服务器地址
+    host: smtp.qq.com
+    # 发送者邮箱
+    username: 826552197@qq.com
+    # 配置密码，注意不是真正的密码，而是刚刚申请到的授权码
+    password: ptngpgcmdxbhbdjf
